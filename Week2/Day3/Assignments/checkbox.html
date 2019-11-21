@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="checkbox"  id="checkbox1">
+    <label for="checkbox1">checkbox1</label> <br>
+
+    <input type="checkbox"  id="checkbox2"> 
+   <label for="checkbox2">checkbox2</label><br>
+
+   <input type="checkbox"  id="checkbox3">
+   <label for="checkbox3">checkbox3</label> <br>
+
+   <input type="checkbox"  id="checkbox4"> 
+   <label for="checkbox4">checkbox4</label><br>
+
+<input type="checkbox"  id="checkbox5"> 
+<label for="checkbox5">checkbox5</label>
+
+<br>
+<br>
+<button id="submit">submit</button>
+<br>
+<h3 id="checkvalue1"></h3>
+<h3 id="checkvalue2"></h3>
+<h3 id="checkvalue3"></h3>
+<h3 id="checkvalue4"></h3>
+<h3 id="checkvalue5"></h3>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#submit").click(function(){
+    if($('#checkbox1').prop('checked')) {
+    console.log("checkbox1")
+    $("#checkvalue1").text("checkbox1 checked")
+} else {
+    $("#checkvalue1").text("")
+
+}
+if($('#checkbox2').prop('checked')) {
+    console.log("checkbox2")
+    $("#checkvalue2").text("checkbox2 checked")
+
+} else {
+//   console.log("not")
+$("#checkvalue2").text("")
+
+}    if($('#checkbox3').prop('checked')) {
+    console.log("checkbox3")
+    $("#checkvalue3").text("checkbox3 checked")
+
+} else {
+//   console.log("not")
+$("#checkvalue3").text("")
+
+}    if($('#checkbox4').prop('checked')) {
+    console.log("checkbox4")
+    $("#checkvalue4").text("checkbox4 checked")
+
+} else {
+//   console.log("not")
+$("#checkvalue4").text("")
+
+}    if($('#checkbox5').prop('checked')) {
+    console.log("checkbox5")
+    $("#checkvalue5").text("checkbox5 checked")
+
+} else {
+//   console.log("not")
+$("#checkvalue5").text("")
+
+}
+  });
+});
+</script> 
+
+</html>

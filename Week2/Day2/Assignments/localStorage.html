@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage Example</h1>
+    <button onclick="myFunction()">Try it</button>
+<br/>
+    <ul id="myList"></ul>
+</body>
+
+<script>
+let arr=[];
+for(let i=1;i<=100;i++){
+    arr.push(i)
+}
+// console.log(arr)
+localStorage.setItem("Array",JSON.stringify(arr));
+// console.log(localStorage.getItem("Array"))
+
+function myFunction() {
+    let arr=JSON.parse(localStorage.getItem("Array"));
+    // console.log(JSON.parse(arr))
+    for(let i=0;i<arr.length;i++){
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(arr[i]);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+}
+}
+
+</script>
+</html>

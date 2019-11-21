@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <p>jquery method</p>
+        <p>click</p>
+        <p>dblclick</p>
+        <p>mouseenter</p>
+        <p>mouseleave</p>
+        <p>mousedown</p>
+        <p>mouseup</p>
+        <p>hover</p>
+        <p>focus</p>
+        <p>mouseleave</p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+   $(document).ready(()=>{
+
+    $('p').each(function(){  
+    var pdata = $(this);  
+    pdata.html( pdata.text().replace(/(^\w+)/,'<strong>$1</strong>') );  
+}); 
+});
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Max Length : 10</h2>
+    <input type="text" maxlength="10" name="inputName" id="input"/>
+  <h4>Text remaining</h4>  <span id="rem"></span>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function(){
+  $("#input").keyup((e)=>{
+let value=e.target.value;
+let len=(value.length),maxLength=10;
+$("#rem").text(maxLength-len); 
+});
+});
+   
+   </script>
+</body>
+</html>
